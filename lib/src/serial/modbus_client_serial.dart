@@ -79,7 +79,7 @@ abstract class ModbusClientSerial extends ModbusClient {
       var unitId = getUnitId(request);
       try {
         // Flush both tx & rx buffers (discard old pending requests & responses)
-        await serialPort.flush();
+        // await serialPort.flush();
 
         // Sent the serial telegram
         var reqTxData = _getTxTelegram(request, unitId);
